@@ -8,22 +8,23 @@ In this exercise we're going to bind event listeners to DOM elements, and change
 
 2. Take a look at the `style.css` file. For this assignment you don't actually have to make any changes to it, but notice that there are CSS classes for `div.blue`, `div.green`, and `div.invisible`. We'll be using the class names to interact with the elements shown on your board. If you get stuck, look at some of the examples in the resource linked above.
 
-3.  In your `game.js` file, write a function called `makeBlue` that takes an evt parameter. `makeGreen` is provided if you need an example. In your function, add the blue class to the event's target element using classList.toggle.
+3.  In your `game.js` file, write a function called `makeBlue` that takes an evt parameter. `makeGreen` is provided if you need an example. In your function, add the blue class to the event's target element using classList.toggle. *Done*
 
-4. At the end of the function, call `updateCounts()` so it will update the counts with your new colour.
+4. At the end of the function, call `updateCounts()` so it will update the counts with your new colour. *Done*
 
 **Note:** `makeGreen` uses `preventDefault()` to stop the right mouse button's context menu from appearing. You don't need it for the other event handlers.
 
-5. When you've written makeBlue, add an event listener for it in the bindEventListeners function beneath the one for `makeGreen`. It should look very similar to the one above it, but use the 'click' event and your `makeBlue` function.
+5. When you've written makeBlue, add an event listener for it in the bindEventListeners function beneath the one for `makeGreen`. It should look very similar to the one above it, but use the 'click' event and your `makeBlue` function. *Done*
 
-Reload the page in your browser and test the changes. If all goes well, when you click the left mouse button on a dot it should go blue, and go green if you click the right mouse button!
+Reload the page in your browser and test the changes. If all goes well, when you click the left mouse button on a dot it should go blue, and go green if you click the right mouse button! *works ok*
 
 6. Write a function `hide` that takes an evt parameter. It'll look almost exactly the same as the first two event handlers, but add the class `invisible`. Don't forget to call updateCounts() at the end of the function.
+*Done*
 
-7. Add an event listener for your `hide` function to bindEventListeners. Use the 'dblclick' event. Reload in the browser and test it out. A double-click should make dots disappear, and they should reappear with a second double-click in the same place.
+7. Add an event listener for your `hide` function to bindEventListeners. Use the 'dblclick' event. Reload in the browser and test it out. A double-click should make dots disappear, and they should reappear with a second double-click in the same place. *Done*
 
 8. Take a look at the `displayTotals` function. It is passed an object called `totals` that contains the number of each colour of dot. You're going to need to update the HTML for each display counter to match these numbers. Each display counter has an id named with the colour followed by "-total" (for example, the counter for blue has the id `blue-total`)\
-Access the HTML element (using a tool such as `document.getElementById`) and update the inner HTML to match the total count for that colour.
+Access the HTML element (using a tool such as `document.getElementById`) and update the inner HTML to match the total count for that colour. *Difficult to the max - I had no idea what to do or what function to apply until I realised that it was an array created so I was able to google .length and apply it*
  
 9. Repeat that for all 'blue', 'green' and 'invisible' classes. Reload the browser periodically to see if your changes are working. If they are, the counts to the right of the board should start going up!
 
